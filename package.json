@@ -9,14 +9,16 @@
     "google_search": "cd demo && node google_search",
     "expose_function1": "cd demo && node expose_function1",
     "expose_function2": "cd demo && node expose_function2",
+    "download": "cd demo && node download",
     "test": "node test"
   },
   "dependencies": {
+    "connect": "^3.4.0",
     "crypto": "1.0.1",
     "http-server": "^0.10.0",
     "mocha": "2.3.3",
+    "node-fetch": "1.7.3",
     "puppeteer": "0.10.1",
-    "connect": "^3.4.0",
     "serve-static": "^1.10.0"
   }
 }
