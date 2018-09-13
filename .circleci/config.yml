@@ -17,20 +17,18 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - demo-{{ checksum "package.json" }}
 
       - run: chmod +x ./setup_libxcb.sh
       - run: sh ./setup_libxcb.sh
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: demo-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
+      - run: npm test
 
 
